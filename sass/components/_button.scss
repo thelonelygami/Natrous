@@ -7,7 +7,7 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         border: none;
         cursor: pointer; 
     }
@@ -37,6 +37,15 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white; 
+
+        &::after {
+            background-color: $color-primary; 
+        }
+    }
+
     &::after {
         content: "";
         display: inline-block;
@@ -54,4 +63,30 @@
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards; 
     }
+}
+
+.btn-text{
+    &:link, &:visited{
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 0.1rem solid $color-primary;
+        padding: 0.3rem;
+        transition: all 0.2s;
+    }
+
+    &:hover{
+        transform: translateY(-0.2rem);
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &:active{
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+   
 }
